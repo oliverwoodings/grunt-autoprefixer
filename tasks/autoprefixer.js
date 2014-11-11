@@ -40,7 +40,8 @@ module.exports = function(grunt) {
                 sourcesContent: options.map.sourcesContent
             },
             from: from,
-            to: to
+            to: to,
+            safe: options.safe
         });
     }
 
@@ -58,7 +59,8 @@ module.exports = function(grunt) {
             cascade: true,
             diff: false,
             map: false,
-            silent: false
+            silent: false,
+            safe: false
         });
 
         prefixer = autoprefixer({browsers: options.browsers, cascade: options.cascade});
